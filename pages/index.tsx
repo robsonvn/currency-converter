@@ -18,7 +18,6 @@ interface Amounts {
 const Home: NextPage = () => {
   const [sellAmount, setSellAmount] = useState("1000");
   const [buyAmount, setBuyAmount] = useState("");
-  const [conversionRate] = useState<number>();
 
   const [amounts, setAmounts] = useState<Amounts>({
     amount: sellAmount,
@@ -48,7 +47,7 @@ const Home: NextPage = () => {
     {
       manual: true,
       onSuccess: ({ conversionRate, buy, sell }) => {
-        setConversionRateExpireDate(Date.now() + 10000); //30s
+        setConversionRateExpireDate(Date.now() + 30000); //30s
         setAmounts({
           ...amounts,
           conversionRate: Number(conversionRate),
@@ -58,9 +57,9 @@ const Home: NextPage = () => {
       },
     }
   );
-  // TODO: Add number format treatment
+
   /* debounce get fx rate function call to prevent multiple calls on key down */
-  const { run } = useDebounceFn(getForeignExchangeRate, { wait: 1000 });
+  const { run } = useDebounceFn(getForeignExchangeRate, { wait: 5000 });
 
   /* Fetches the fx rates after the amounts change */
   useEffect(() => {

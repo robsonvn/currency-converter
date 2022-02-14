@@ -1,4 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4c64ca8b-9ccb-49c4-ac2d-64faacc06d28/deploy-status)](https://app.netlify.com/sites/dazzling-roentgen-1c51d4/deploys)
+
+# Currency Calculator 
+A simple currency converter built using React, TypeScript, and [Next.js](https://nextjs.org/) 
+## Preview
+
+This app is available for preview at [here](https://dazzling-roentgen-1c51d4.netlify.app/)
 
 ## Getting Started
 
