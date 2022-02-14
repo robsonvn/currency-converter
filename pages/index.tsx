@@ -66,7 +66,6 @@ const Home: NextPage = () => {
 
   /* Fetches the fx rates after the amounts change */
   useEffect(() => {
-    console.log(amounts.conversionRate, amounts.buy !== amounts.sell);
     if (amounts.conversionRate === undefined && amounts.buy !== amounts.sell) {
       run(amounts);
     }
