@@ -60,8 +60,7 @@ const Home: NextPage = () => {
 
   /* debounce get fx rate function call to prevent multiple calls on key down */
   const { run } = useDebounceFn(getForeignExchangeRate, {
-    wait: 5000,
-    leading: true,
+    wait: 1000,
   });
 
   /* Fetches the fx rates after the amounts change */
@@ -184,7 +183,8 @@ const Home: NextPage = () => {
                             </p>
                           </div>
                           <div className="text-right text-sm whitespace-nowrap text-gray-500">
-                            {conversionRateCountdown > 0 &&
+                            {amounts.conversionRate &&
+                              conversionRateCountdown > 0 &&
                               `will expire in ${Math.round(
                                 conversionRateCountdown / 1000
                               )}s`}
