@@ -59,10 +59,14 @@ const Home: NextPage = () => {
   );
 
   /* debounce get fx rate function call to prevent multiple calls on key down */
-  const { run } = useDebounceFn(getForeignExchangeRate, { wait: 5000 });
+  const { run } = useDebounceFn(getForeignExchangeRate, {
+    wait: 5000,
+    leading: true,
+  });
 
   /* Fetches the fx rates after the amounts change */
   useEffect(() => {
+    console.log(amounts.conversionRate, amounts.buy !== amounts.sell);
     if (amounts.conversionRate === undefined && amounts.buy !== amounts.sell) {
       run(amounts);
     }
