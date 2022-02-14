@@ -4,7 +4,7 @@
 A simple currency converter built using React, TypeScript, and [Next.js](https://nextjs.org/) 
 ## Preview
 
-This app is available for preview at [here](https://dazzling-roentgen-1c51d4.netlify.app/)
+This app is available for preview [here](https://dazzling-roentgen-1c51d4.netlify.app/)
 
 ## Getting Started
 
